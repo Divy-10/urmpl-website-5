@@ -1,0 +1,74 @@
+.exp-graphic {
+  position: relative;
+  width: min(440px, 100%);
+  aspect-ratio: 1 / 0.92;
+  margin: 0 auto;
+}
+.exp-graphic__arc {
+  position: absolute;
+  left: 0;
+  top: 4%;
+  width: 72%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: linear-gradient(150deg, #2a7bea 0%, var(--blue) 45%, #0f4fb0 100%);
+}
+.exp-graphic__disc {
+  position: absolute;
+  left: 22%;
+  top: 20%;
+  width: 62%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 30px 60px -20px rgba(16, 43, 70, 0.35), 0 8px 18px -10px rgba(16, 43, 70, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.exp-graphic__value {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: clamp(56px, 7vw, 84px);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--blue);
+}
+.exp-graphic__label {
+  margin-top: 10px;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: clamp(17px, 1.8vw, 21px);
+  color: var(--text);
+}
+.exp-graphic__sub {
+  margin-top: 2px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.exp-graphic__dot {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--blue);
+}
+.exp-graphic__dot--lg {
+  width: 9%;
+  aspect-ratio: 1;
+  right: 10%;
+  top: 6%;
+}
+.exp-graphic__dot--sm {
+  width: 5.5%;
+  aspect-ratio: 1;
+  right: 11.5%;
+  top: 21%;
+}
+.reveal .exp-graphic__disc {
+  transform: scale(0.92);
+  transition: transform 0.9s var(--ease) 0.15s;
+}
+.reveal.is-visible .exp-graphic__disc {
+  transform: none;
+}

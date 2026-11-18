@@ -1,0 +1,118 @@
+.demo-form {
+  display: grid;
+  gap: 20px;
+}
+.demo-form__banner {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 14px 16px;
+  background: #fff8e6;
+  border: 1px solid #f1d38a;
+  border-radius: var(--radius-sm);
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #5c4708;
+}
+.demo-form__banner svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.demo-form__banner a {
+  font-weight: 600;
+  text-decoration: underline;
+}
+.demo-form__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.field {
+  display: grid;
+  gap: 7px;
+}
+.field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+.field label span {
+  color: var(--blue);
+}
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  font: inherit;
+  font-size: 14.5px;
+  color: var(--text);
+  background: #fff;
+  border: 1px solid #d6dde5;
+  border-radius: var(--radius-sm);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.field textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(23, 101, 209, 0.15);
+}
+.field.has-error input,
+.field.has-error select,
+.field.has-error textarea {
+  border-color: #d0453b;
+}
+.field__err {
+  font-size: 12.5px;
+  color: #c0392b;
+}
+.demo-form__actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.demo-form__note {
+  font-size: 13px;
+  color: var(--muted);
+}
+.demo-form__result {
+  display: flex;
+  gap: 12px;
+  padding: 18px 20px;
+  background: #fff4f2;
+  border: 1px solid #f0c2bb;
+  border-left: 4px solid #d0453b;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  color: #5b1e17;
+  animation: pageIn 0.35s var(--ease) both;
+}
+.demo-form__result svg {
+  flex-shrink: 0;
+  color: #d0453b;
+  margin-top: 2px;
+}
+.demo-form__result p {
+  margin-top: 4px;
+  line-height: 1.6;
+}
+.demo-form__call {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 8px;
+  font-weight: 700;
+  color: var(--navy);
+}
+@media (max-width: 640px) {
+  .demo-form__grid { grid-template-columns: 1fr; }
+  .demo-form__actions .btn { width: 100%; }
+}
